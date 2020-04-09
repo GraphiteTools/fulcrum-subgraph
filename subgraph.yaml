@@ -1,0 +1,234 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: iETH Token
+    network: mainnet
+    source:
+      address: "0x77f973fcaf871459aa58cd81881ce453759281bc"
+      abi: iToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Mint(indexed address,uint256,uint256,uint256)
+          handler: handleMint
+        - event: Burn(indexed address,uint256,uint256,uint256)
+          handler: handleBurn
+      abis:
+        - name: iToken
+          file: ./abis/iToken.json
+      file: ./src/iToken.ts
+  - kind: ethereum/contract
+    name: iSAI Token
+    network: mainnet
+    source:
+      address: "0x14094949152eddbfcd073717200da82fed8dc960"
+      abi: iToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Mint(indexed address,uint256,uint256,uint256)
+          handler: handleMint
+        - event: Burn(indexed address,uint256,uint256,uint256)
+          handler: handleBurn
+      abis:
+        - name: iToken
+          file: ./abis/iToken.json
+      file: ./src/iToken.ts
+  - kind: ethereum/contract
+    name: iDAI Token
+    network: mainnet
+    source:
+      address: "0x493C57C4763932315A328269E1ADaD09653B9081"
+      abi: iToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Mint(indexed address,uint256,uint256,uint256)
+          handler: handleMint
+        - event: Burn(indexed address,uint256,uint256,uint256)
+          handler: handleBurn
+      abis:
+        - name: iToken
+          file: ./abis/iToken.json
+      file: ./src/iToken.ts
+  - kind: ethereum/contract
+    name: iUSDC Token
+    network: mainnet
+    source:
+      address: "0xf013406a0b1d544238083df0b93ad0d2cbe0f65f"
+      abi: iToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Mint(indexed address,uint256,uint256,uint256)
+          handler: handleMint
+        - event: Burn(indexed address,uint256,uint256,uint256)
+          handler: handleBurn
+      abis:
+        - name: iToken
+          file: ./abis/iToken.json
+      file: ./src/iToken.ts
+  - kind: ethereum/contract
+    name: iSUSD Token
+    network: mainnet
+    source:
+      address: "0x49f4592E641820e928F9919Ef4aBd92a719B4b49"
+      abi: iToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Mint(indexed address,uint256,uint256,uint256)
+          handler: handleMint
+        - event: Burn(indexed address,uint256,uint256,uint256)
+          handler: handleBurn
+      abis:
+        - name: iToken
+          file: ./abis/iToken.json
+      file: ./src/iToken.ts
+  - kind: ethereum/contract
+    name: iWBTC Token
+    network: mainnet
+    source:
+      address: "0xba9262578efef8b3aff7f60cd629d6cc8859c8b5"
+      abi: iToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Mint(indexed address,uint256,uint256,uint256)
+          handler: handleMint
+        - event: Burn(indexed address,uint256,uint256,uint256)
+          handler: handleBurn
+      abis:
+        - name: iToken
+          file: ./abis/iToken.json
+      file: ./src/iToken.ts
+  - kind: ethereum/contract
+    name: iLINK Token
+    network: mainnet
+    source:
+      address: "0x1d496da96caf6b518b133736beca85d5c4f9cbc5"
+      abi: iToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Mint(indexed address,uint256,uint256,uint256)
+          handler: handleMint
+        - event: Burn(indexed address,uint256,uint256,uint256)
+          handler: handleBurn
+      abis:
+        - name: iToken
+          file: ./abis/iToken.json
+      file: ./src/iToken.ts
+  - kind: ethereum/contract
+    name: iZRX Token
+    network: mainnet
+    source:
+      address: "0xa7eb2bc82df18013ecc2a6c533fc29446442edee"
+      abi: iToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Mint(indexed address,uint256,uint256,uint256)
+          handler: handleMint
+        - event: Burn(indexed address,uint256,uint256,uint256)
+          handler: handleBurn
+      abis:
+        - name: iToken
+          file: ./abis/iToken.json
+      file: ./src/iToken.ts
+  - kind: ethereum/contract
+    name: iREP Token
+    network: mainnet
+    source:
+      address: "0xbd56e9477fc6997609cf45f84795efbdac642ff1"
+      abi: iToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Mint(indexed address,uint256,uint256,uint256)
+          handler: handleMint
+        - event: Burn(indexed address,uint256,uint256,uint256)
+          handler: handleBurn
+      abis:
+        - name: iToken
+          file: ./abis/iToken.json
+      file: ./src/iToken.ts
+  - kind: ethereum/contract
+    name: iKNC Token
+    network: mainnet
+    source:
+      address: "0x1cc9567ea2eb740824a45f8026ccf8e46973234d"
+      abi: iToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Mint(indexed address,uint256,uint256,uint256)
+          handler: handleMint
+        - event: Burn(indexed address,uint256,uint256,uint256)
+          handler: handleBurn
+      abis:
+        - name: iToken
+          file: ./abis/iToken.json
+      file: ./src/iToken.ts
