@@ -1,6 +1,12 @@
 {
   "name": "fulcrum-subgraph",
-  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "description": "Fulcrum Subgraph",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GraphiteTools/fulcrum-subgraph.git"
+  },
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
